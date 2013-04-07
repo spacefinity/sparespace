@@ -1,7 +1,7 @@
 import System.IO
 
 main = do
-  inputFile <- readFile "cities"
-  writeFile "cities2" (unlines $ map (++ "\",") (map ('"':) (lines inputFile)))
+  inputFile <- readFile "city-list.txt"
+  writeFile "city-list-for-array.txt" (unlines $ map (++ "\",") (map ('"':) (lines inputFile)))
   --print (unlines $ map (++ "\",") (map ('"':) (lines inputFile)))
 
