@@ -27,12 +27,29 @@
         <div id="map-canvas" style="width: 958px; height: 250px;"></div>
       </div>
 
-      <hr />
+      <div class="listings-container">
+        <div class="row">
+          <div class="span8">
+            <div data-bind="template: { name: 'listing-template', foreach: listings }"></div>
+          </div>
+          <div class="span4 filters">
+            TODO: Filters
+          </div>
+        </div>
+      </div>
 
       <footer>
         <!-- TODO: implement footer links -->
         <p>&copy; 2013 SpareSpace &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </div>
+     
+    <script type="text/html" id="listing-template">
+      <div class="listing">
+      <div class="listing-details">
+      <h3 data-bind="text: title"></h3>
+      <img data-bind="" />
+      <p>Cost: <span data-bind="text: cost"></span></p>
+    </script>
   </body>
 </html>

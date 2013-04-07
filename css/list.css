@@ -25,6 +25,10 @@ hr {
   max-width: none;
 }
 
+.listing {
+  margin-top: 24px;
+}
+
 footer {
   text-align: center;
 }
