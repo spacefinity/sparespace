@@ -142,6 +142,16 @@ hr {
 .bordered { border: 1px solid #fff; }
 .orange { color: #e35528; }
 
+/* Filter options */
+h3 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+}
+.input-item input { float: left; }
+.input-item label { float: left; margin-left: 4px; margin-top: 8px; }
+
 footer {
   text-align: center;
 }
