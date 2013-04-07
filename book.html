@@ -16,6 +16,17 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/knockout-2.2.1.js"></script>
     <script src="js/book.js"></script>
+    <style type="text/css">
+      .modal {
+        width: 600px;
+        margin-left: -300px;
+      }
+      .right { float: right; }
+      .left { float: left; }
+      .clear { clear: both; }
+      .padder { padding: 20px; }
+      .ib { display: inline-block; }
+    </style>
   </head>
   <body>
     <div class="container content">
@@ -48,7 +59,7 @@
               <input class="input-block-level date" type="text" placeholder="Check In" />
               <input class="input-block-level date" type="text" placeholder="Check Out" />
             </div>
-            <a href="#" class="btn input-block-level bgg">Book Space Now</a>
+            <a href="#" class="btn input-block-level bgg" data-toggle="modal" data-target="#modaler">BOOK SPACE NOW</a>
           </div>
           <div class="spacer"></div>
           <div class="rounded gray pad padt dark">
@@ -71,6 +82,47 @@
         <!-- TODO: implement footer links -->
         <p>&copy; 2013 SpareSpace &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
+      <div class="modal hide fade" id="modaler">
+        <div class="brand">
+          <div class="logo">
+            <img src="img/logo.png" />
+          </div>
+        </div>
+
+        <div class="pad">
+
+          <div class="center">
+          <h1 class="orange">SpareSpace Terms of Service and Insurance Policy</h1>
+          <div style="height: 10px;"></div>
+            <h2>We Want to Protect You!</h2>
+            <h2>Read this and check a box below!</h2>
+          </div>
+          <div style="height: 10px;"></div>
+          <p>Postea euismod consequuntur no qui, error nihil prodesset at his, esse accusam electram vel eu. Mel vivendo platonem ei, omnesque invenire assueverit sed id, duo id stet iusto vitae. Usu quem congue expetendis eu, mel at dolorem explicari argumentum. Habeo errem melius an eum. Tantas copiosae no pri. Sit amet dolore ut. Per ea debitis disputando.</p>
+          <p>Usu ut atqui quidam, iudico partem mei an. Est petentium elaboraret an, qui quas prodesset vituperata ad. Has cu perpetua liberavisse, quo et sapientem disputationi consectetuer. No nec justo idque iisque, solet laboramus sit cu, his labores conceptam ex. Eos id dicta choro.</p>
+        </div>
+        <div class="gray">
+          <div class="padder">
+            <div class="left">
+              <label class="checkbox">
+                <input type="checkbox" id="ch1" />
+                Yes please! I want the insurance.
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="ch1" />
+                No thanks, I have my own insurance.
+              </label>
+            </div>
+            <div class="right">
+              <div class="pad">
+                <a href="#">Cancel</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                <button type="button" class="btn bgg">BOOK SPACE NOW</button>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
