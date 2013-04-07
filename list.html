@@ -65,27 +65,30 @@
     </div>
 
     <script type="text/html" id="listing-template">
-      <div class="row-fluid listing">
+      <div class="listing">
         <a href="book.html">
-          <div class="span2 image">
-            <img data-bind="attr: {src: photo_url}" />
-          </div>
-          <div class="span5 info">
-            <h2 data-bind="text: title"></h2>
-            <div class="item">
-              Verified: <span data-bind="text: verified ? 'Yes' : 'No'"></span>
+          <div class="row-fluid">
+            <div class="span2 image">
+              <img data-bind="attr: {src: photo_url}" />
             </div>
-            <div class="item">
-              Review:
-              <span class="positive"><span data-bind="text: positive_reviews"></span>&nbsp;Positive</span>
-              <span class="negative"><span data-bind="text: negative_reviews, css: { is_negative: negative_reviews > 0 }"></span>&nbsp;Negative</span>
+            <div class="span5 info">
+              <h2 data-bind="text: title"></h2>
+              <div class="item">
+                Verified: <span data-bind="text: verified ? 'Yes' : 'No'"></span>
+              </div>
+              <div class="item">
+                Review:
+                <span class="positive"><span data-bind="text: positive_reviews"></span>&nbsp;Positive</span>
+                <span class="negative"><span data-bind="text: negative_reviews, css: { is_negative: negative_reviews > 0 }"></span>&nbsp;Negative</span>
+              </div>
             </div>
-          </div>
-          <div class="span2 cost">
-            <div class="cost-info">
-              <div class="amount">$<span data-bind="text: cost"></span></div>
-              <div class="subtext">per month</div>
+            <div class="span2 cost">
+              <div class="cost-info">
+                <div class="amount">$<span data-bind="text: cost"></span></div>
+                <div class="subtext">per month</div>
+              </div>
             </div>
+            <div class="clearfix"></div>
           </div>
           <div class="clearfix"></div>
         </a>

@@ -60,8 +60,11 @@ hr {
 .listing-list {
   background-color: #F2F2F2;
 }
-.listing a:hover {
-  background-color: #888;
+.listing-list a {
+  display: block;
+}
+.listing-list a:hover {
+  background-color: #E2E2E2;
 }
 .listing h2 {
   font-size: 24px;
