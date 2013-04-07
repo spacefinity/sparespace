@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Spare Space</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- spare styles -->
+    <meta charset="utf-8" />
+    <title>SpareSpace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="ico/favicon.png">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/knockout-2.2.1.js"></script>
+    <!--<script src="js/list.js"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      var stockholm = new google.maps.LatLng(59.32522, 18.07002);
+      var parliament = new google.maps.LatLng(59.327383, 18.06747);
+      var marker;
+      var map;
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
+      function initialize() {
+        var mapOptions = {
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: stockholm
+        };
 
-    <!-- spare icons -->
-    <link rel="favicon" href="img/favicon.png">
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+        marker = new google.maps.Marker({
+          map:map,
+          draggable:true,
+          animation: google.maps.Animation.DROP,
+          position: parliament
+        });
+        google.maps.event.addListener(marker, 'click', toggleBounce);
+      }
+
+      function toggleBounce() {
+
+        if (marker.getAnimation() != null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body onload="initialize()">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">
+          <img src="img/logo.png" />
+        </div>
+      </div>
 
+      <div id="map-canvas" style="width: 1170px; height: 250px;">map div</div>
+
+      <div class="map-area">
+        <frame width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pittsburgh,+PA&amp;aq=0&amp;oq=pitts&amp;sll=40.431368,-79.9805&amp;sspn=0.144516,0.338173&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Pittsburgh,+Allegheny,+Pennsylvania&amp;z=11&amp;ll=40.440625,-79.995886&amp;output=embed"></iframe>
+
+        <div id="map-canvas"></div>
+      </div>
+
+      <hr />
+
+      <footer>
+        <!-- TODO: implement footer links -->
+        <p>&copy; 2013 SpareSpace &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </div>
   </body>
 </html>

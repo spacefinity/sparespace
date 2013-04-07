@@ -1,0 +1,19 @@
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+hr {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.brand {
+  background-color: #F2F2F2;
+}
+.logo {
+  text-align: center;
+}
+
+#map-canvas img {
+  max-width: none;
+}
