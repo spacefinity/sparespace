@@ -25,9 +25,22 @@ function init_maps() {
 
   // Startup Weekend
   add_marker(map, startup_weekend);
-
   // Thrill Mill
   add_marker(map, new google.maps.LatLng(40.462556, -79.918327));
+  // Thrill Mill
+  add_marker(map, new google.maps.LatLng(40.462556, -79.918327));
+  // Heinz Field
+  add_marker(map, new google.maps.LatLng(40.431368, -79.9805));
+  // Carnegie Museum
+  add_marker(map, new google.maps.LatLng(40.446674, -80.015688));
+}
+
+function drop() {
+  for (var i =0; i < markerArray.length; i++) {
+    setTimeout(function() {
+      addMarkerMethod();
+    }, i * 200);
+  }
 }
 
 function add_marker(map, position) {
