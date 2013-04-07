@@ -46,10 +46,25 @@
      
     <script type="text/html" id="listing-template">
       <div class="listing">
-      <div class="listing-details">
-      <h3 data-bind="text: title"></h3>
-      <img data-bind="" />
-      <p>Cost: <span data-bind="text: cost"></span></p>
+        <div class="image">
+          <img data-bind="attr: {src: photo_url}" />
+        </div>
+        <div class="info">
+          <h2 data-bind="text: title"></h2>
+          <div class="item">
+            Verified: <span data-bind="text: verified ? 'Yes' : 'No'"></span>
+          </div>
+          <div class="item">
+            Review:
+            <span class="positive">Positive <span data-bind="text: positive_reviews"></span></span>
+            <span class="negative">Negative <span data-bind="text: negative_reviews"></span></span>
+          </div>
+        </div>
+        <div class="cost">
+          <div class="cost-number">$<span data-bind="text: cost"></span></div>
+          <div class="cost-subtext">per month</div>
+        </div>
+      </div>
     </script>
   </body>
 </html>
