@@ -22,12 +22,19 @@
       .color { background-color: red; }
     </style>
     <style type="text/css">
-      .pad { padding: 25px; }
+      .pad { padding: 10px; }
       .w_250 { width: 250px; }
       .t_center { text-align: center; }
       .left { float: left; }
       .right { float: right; }
       .clear { clear: both; }
+      .bgo {
+        background-color: #e35528;
+        background-image: none;
+        color: #ffffff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -51,17 +58,19 @@
             </select>
             <label for="wts">Where do you want to store?</label>
             <input class="input-block-level typeahead" type="text" id="wts" placeholder="Pittsburgh" />
-            <div>
-              <div class="w_250 left">
-                <label for="start">Start:</label>
-                <input class="input-block-level date" type="text" id="start" />
-              </div>
-              <div class="w_250 right"> 
-                <label for="end">End:</label>
-                <input class="input-block-level date" type="text" id="end" />
-              </div>
-              <div class="clear"></div>
+            <div class="w_250 left">
+              <label for="start">Start:</label>
+              <input class="input-block-level date" type="text" id="start" />
             </div>
+            <div class="w_250 right"> 
+              <label for="end">End:</label>
+              <input class="input-block-level date" type="text" id="end" />
+            </div>
+            <div class="right">
+              <a href='#'>Cancel</a> &nbsp; &nbsp; &nbsp;
+              <a href="list.html" class="btn bgo">Next</a>
+            </div>
+            <div class="clear"></div>
           </div>
         </form>     
       </div>
