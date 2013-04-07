@@ -1,0 +1,14 @@
+.pad { padding: 10px; }
+.w_250 { width: 250px; }
+.t_center { text-align: center; }
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.bgo {
+  background-color: #e35528;
+  background-image: none;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+}
