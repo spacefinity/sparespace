@@ -26,7 +26,6 @@ function init_maps() {
   });
 
   // Startup Weekend
-  add_marker(map, startup_weekend);
 
   // Thrill Mill
   add_marker(map, new google.maps.LatLng(40.462556, -79.918327));
