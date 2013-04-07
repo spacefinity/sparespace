@@ -23,24 +23,31 @@ function init_maps() {
     center: startup_weekend
   });
 
-  // Startup Weekend
-  add_marker(map, startup_weekend);
-  // Thrill Mill
-  add_marker(map, new google.maps.LatLng(40.462556, -79.918327));
-  // Thrill Mill
-  add_marker(map, new google.maps.LatLng(40.462556, -79.918327));
-  // Heinz Field
-  add_marker(map, new google.maps.LatLng(40.431368, -79.9805));
-  // Carnegie Museum
-  add_marker(map, new google.maps.LatLng(40.446674, -80.015688));
-}
+  var markers = [
+    startup_weekend,
+    // Thrill Mill
+    new google.maps.LatLng(40.462556, -79.918327),
+    // Heinz Field
+    new google.maps.LatLng(40.431368, -79.9805),
+    // Carnegie Museum
+    new google.maps.LatLng(40.446674, -80.015688)
+  ];
 
-function drop() {
-  for (var i =0; i < markerArray.length; i++) {
-    setTimeout(function() {
-      addMarkerMethod();
-    }, i * 200);
+  function drop_marker() {
+    add_marker(map, markers.pop());
   }
+
+  function drop_all() {
+    for (var i = 0; i < markers.length; i++) {
+      setTimeout(function() {
+        drop_marker();
+      }, i * 200);
+    }
+  }
+
+  setTimeout(function() {
+    drop_all();
+  }, 1000);
 }
 
 function add_marker(map, position) {
