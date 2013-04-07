@@ -22,12 +22,14 @@ hr {
   border: 1px solid #333;
 }
 #map-canvas img {
-  max-width: none;
+  max-width: 958px;
+  height: 250px;
 }
 
 .listing {
   margin-top: 24px;
 }
+
 
 footer {
   text-align: center;
