@@ -19,6 +19,12 @@
     .navbar-bottom { padding-top: 40px; padding-bottom: 40px; }
   </style>
   <script>
+    $(function() {
+      $('.js-btn-space').click(function() {
+        return false;
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="navbar-new">
@@ -38,8 +44,8 @@
     <table width="100%" cellspacing="3">
       <tr>
         <td class ="td_max"></td>
-        <td class ="td_size" align="center"><a data-toggle="modal" data-target="#modaler" href="#" class="btnspace">I have stuff </a></td>
-        <td class ="td_size" align="center"><a href="#" class="btnspace">I have space </a></td>
+        <td class ="td_size" align="center"><a data-toggle="modal" data-target="#modaler" href="#" class="btnspace js-btn-stuff">I have stuff </a></td>
+        <td class ="td_size" align="center"><a href="#" class="btnspace js-btn-space">I have space </a></td>
         <td class ="td_max"></td>
       </tr>
       <tr></tr>
@@ -57,9 +63,7 @@
   <div class="navbar-bottom">
     <div class="container">
       <div class="row">
-        <div class="span6 offset3">
-          <img src="img/logo2.png" width="550" height="200" />
-        </div>
+        <img src="img/logo2.png" width="550" height="200" />
         <form class="modal hide fade" id="modaler">
           <div class="pad">
             <label for="hms">How Much Space?</label>
