@@ -1,3 +1,31 @@
+@media (min-width: 768px) {
+  .listing .cost {
+    display: block;
+    float: right;
+    border-left: 1px solid #aaa;
+  }
+  .listing .info {
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 980px) {
+  .listing-list {
+    padding: 24px;
+  }
+  .listing .cost .cost-info {
+    padding: 32px 0 32px 16px;
+  }
+}
+@media (max-width: 979px) {
+  .listing-list {
+    padding: 24px 0;
+  }
+  .listing .cost .cost-info {
+    padding: 32px 0;
+  }
+}
+
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
@@ -26,10 +54,55 @@ hr {
   height: 250px;
 }
 
-.listing {
-  margin-top: 24px;
+.results-container {
+}
+.listing-list {
+  background-color: #F2F2F2;
 }
 
+.listing [class*="span"] {
+    margin: 24px 0 0 0;
+}
+.listing h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #E35528;
+  margin: 0;
+  padding: 0 0 12px 0;
+}
+.listing .image {
+  float: left;
+  width: 218px;
+  height: 130px;
+  margin-right: 24px;
+}
+.listing .info {
+  float: left;
+}
+.listing .info .item {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.listing .info .positive {
+  color: #39B54A;
+}
+.listing .info .negative.is_negative {
+  color: #FD2020;
+}
+.listing .cost {
+  display: block;
+  float: right;
+}
+.listing .cost .cost-info .amount {
+  color: #333;
+  font-size: 48px;
+  height: 36px;
+}
+.listing .cost .cost-info .subtext {
+
+}
 
 footer {
   text-align: center;
