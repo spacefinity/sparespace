@@ -22,3 +22,7 @@ hr {
 #map-canvas img {
   max-width: none;
 }
+
+footer {
+  text-align: center;
+}
