@@ -14,6 +14,10 @@ hr {
   text-align: center;
 }
 
+.map-area {
+  border: 1px solid #333;
+}
+
 #map-canvas img {
   max-width: none;
 }
