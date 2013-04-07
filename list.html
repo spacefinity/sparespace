@@ -26,7 +26,7 @@
         <div id="map-canvas" style="height: 250px;"></div>
       </div>
 
-      <div class="row-fluid results-container">
+      <div class="row-fluid">
         <div class="span9 listing-list">
           <div data-bind="template: { name: 'listing-template', foreach: listings }"></div>
           <div class="clearfix"></div>
@@ -46,27 +46,29 @@
 
     <script type="text/html" id="listing-template">
       <div class="row-fluid listing">
-        <div class="span2 image">
-          <img data-bind="attr: {src: photo_url}" />
-        </div>
-        <div class="span5 info">
-          <h2 data-bind="text: title"></h2>
-          <div class="item">
-            Verified: <span data-bind="text: verified ? 'Yes' : 'No'"></span>
+        <a href="book.html">
+          <div class="span2 image">
+            <img data-bind="attr: {src: photo_url}" />
           </div>
-          <div class="item">
-            Review:
-            <span class="positive"><span data-bind="text: positive_reviews"></span>&nbsp;Positive</span>
-            <span class="negative"><span data-bind="text: negative_reviews, css: { is_negative: negative_reviews > 0 }"></span>&nbsp;Negative</span>
+          <div class="span5 info">
+            <h2 data-bind="text: title"></h2>
+            <div class="item">
+              Verified: <span data-bind="text: verified ? 'Yes' : 'No'"></span>
+            </div>
+            <div class="item">
+              Review:
+              <span class="positive"><span data-bind="text: positive_reviews"></span>&nbsp;Positive</span>
+              <span class="negative"><span data-bind="text: negative_reviews, css: { is_negative: negative_reviews > 0 }"></span>&nbsp;Negative</span>
+            </div>
           </div>
-        </div>
-        <div class="span2 cost">
-          <div class="cost-info">
-            <div class="amount">$<span data-bind="text: cost"></span></div>
-            <div class="subtext">per month</div>
+          <div class="span2 cost">
+            <div class="cost-info">
+              <div class="amount">$<span data-bind="text: cost"></span></div>
+              <div class="subtext">per month</div>
+            </div>
           </div>
-        </div>
-        <div class="clearfix"></div>
+          <div class="clearfix"></div>
+        </a>
       </div>
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
