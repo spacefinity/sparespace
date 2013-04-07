@@ -7,6 +7,10 @@ hr {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
+.content {
+  max-width: 960px;
+}
+
 .brand {
   background-color: #F2F2F2;
 }
@@ -14,11 +18,9 @@ hr {
   text-align: center;
   padding: 12px 0;
 }
-
 .map-area {
   border: 1px solid #333;
 }
-
 #map-canvas img {
   max-width: none;
 }
