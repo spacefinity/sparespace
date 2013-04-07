@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Spare Space</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- spare styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>SpareSpace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- spare icons -->
-    <link rel="favicon" href="img/favicon.png">
+    <link href="css/book.css" rel="stylesheet">
+    <link href="css/jquery-ui-humanity.min.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/knockout-2.2.1.js"></script>
+    <script src="js/book.js"></script>
   </head>
   <body>
+    <div class="container content">
+      <div class="brand">
+        <div class="logo">
+          <img src="img/logo.png" />
+        </div>
+      </div>
 
+      <div class="map-area">
+        <div id="map-canvas" style="height: 250px;"></div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="span9">
+          <img class="" src="img/ui1.png" alt="space" />
+          <div class="text pad gray">
+            <h4 class="orange">Dry Basement for Rent</h4>
+            <p class="address">419 Edmond St Pittsburgh PA 15224 - Bloomfield</p>
+            <p>Duis ullamcorper lectus elit. Vestibulum feugiat dolor felis. Ut lectus nisi, pulvinar eu eleifend eu, commodo ac diam. Fusce sit amet enim quam. Vestibulum fermentum venenatis turpis, id pellentesque mauris tempor sit amet. Phasellus quis felis id lectus sagittis mattis vitae venenatis felis. Fusce luctus laoreet facilisis. Praesent sed dolor non dui mollis adipiscing sit amet id metus. Donec hendrerit justo eu purus elementum porttitor faucibus leo interdum. Quisque nec dui interdum quam adipiscing euismod vulputate ut lacus. Nunc eros justo, bibendum id faucibus nec, dapibus sit amet neque. Nunc auctor placerat tortor in pharetra. Aliquam fringilla tristique lorem, et auctor diam cursus in.</p>
+            <p>Donec ac turpis quis nulla bibendum laoreet. Nunc dictum odio sed arcu cursus fermentum. Nam sodales turpis ac justo ornare in mollis urna viverra. Cras eleifend tempus lectus, non auctor ante hendrerit ac. Proin mauris urna, posuere sit amet hendrerit vel, scelerisque sed libero. Fusce ac pharetra dolor. Aliquam ut leo non odio elementum porttitor. Donec ac nunc nulla.</p>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="spacer"></div>
+          <div class="rounded gray pad padt dark">
+            <span class="big">$20</span>
+            <span>per month</span>
+            <div class="mtop">
+              <input class="input-block-level date" type="text" placeholder="Check In" />
+              <input class="input-block-level date" type="text" placeholder="Check Out" />
+            </div>
+            <a href="#" class="btn input-block-level bgg">Book Space Now</a>
+          </div>
+          <div class="spacer"></div>
+          <div class="rounded gray pad padt dark">
+            <div class="center">
+              <img class="bordered" src="img/ui2.png" alt="alex" />
+            </div>
+            <div class="mtop">
+              <p class="sbig">Alex Hendershott</p>
+              <p>Verified: Yes</p>
+              <p>Review: <span class="green">26 Positive</span> <span class="red">0 Negative</span></p>
+            </div>
+            <a href="#" class="btn input-block-level bgo">Contact Host</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <footer>
+        <!-- TODO: implement footer links -->
+        <p>&copy; 2013 SpareSpace &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </div>
   </body>
 </html>
